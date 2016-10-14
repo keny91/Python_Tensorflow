@@ -21,3 +21,6 @@ sess = tf.Session()
 
 result = sess.run(product)
 print(result)
+
+
+sess.close()
