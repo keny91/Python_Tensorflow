@@ -27,8 +27,6 @@ classifier = tf.contrib.learn.DNNClassifier(feature_columns=feature_columns,
                                             n_classes=3,
                                             model_dir="/tmp/iris_model")
 
-
-
 # Fit model.
 classifier.fit(x=training_set.data,
                y=training_set.target,

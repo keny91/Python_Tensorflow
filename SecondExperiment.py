@@ -1,4 +1,4 @@
-
+# Basic Operations
 
 import tensorflow as tf
 
@@ -16,14 +16,15 @@ update = tf.assign(state, new_value)
 init_op = tf.initialize_all_variables()
 
 # Launch the graph and run the ops.
+
 with tf.Session() as sess:
-  # Run the 'init' op
+#	Run the 'init' op
 	sess.run(init_op)
-  # Print the initial value of 'state'
+# 	Print the initial value of 'state'
 	print(sess.run(state))
 
-  # Run the op that updates 'state' and print 'state'.
+# Run the op that updates 'state' and print 'state'.
 	for _ in range(3):
-	    sess.run(update)
-	    print(sess.run(state))
+		sess.run(update)
+		print(sess.run(state))
 	sess.close()
